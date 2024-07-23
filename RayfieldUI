@@ -20,8 +20,8 @@ ImageButton.Size = UDim2.new(0, 50, 0, 50)
 ImageButton.Draggable = true
 ImageButton.Image = "http://www.roblox.com/asset/?id=15094837583"
 ImageButton.MouseButton1Down:connect(function()
-    game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.k,false,game)
-    game:GetService("VirtualInputManager"):SendKeyEvent(false,Enum.KeyCode.k,true,game)
+    game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.K,false,game)
+    game:GetService("VirtualInputManager"):SendKeyEvent(false,Enum.KeyCode.K,true,game)
 end)
 UICorner.Parent = ImageButton
 
