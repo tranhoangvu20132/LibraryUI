@@ -3484,10 +3484,10 @@ end)
 Topbar.Type.MouseButton1Click:Connect(function()
 	if Debounce or Minimised then return end
 	if SideBarClosed then
-		Topbar.Type.Image = "rbxassetid://"..6023565894
+		Topbar.Type.Image = "rbxassetid://"..15094837583
 		OpenSideBar()
 	else
-		Topbar.Type.Image = "rbxassetid://"..6023565896
+		Topbar.Type.Image = "rbxassetid://"..15094837583
 		CloseSideBar()
 	end
 end)
