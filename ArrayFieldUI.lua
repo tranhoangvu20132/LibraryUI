@@ -1,5 +1,5 @@
 for _, v in ipairs(game.CoreGui:GetChildren()) do
-    if v.Name == "ScreenGui" or v.Name == "Dragon Sea" or v.Name == "Main" then
+    if v.Name == "ScreenGui" or v.Name == "ELGATO HUB ON/OFF" or v.Name == "Main" then
         v:Destroy()
     end
 end
@@ -14,7 +14,7 @@ local ScreenGui = Instance.new("ScreenGui")
 local ImageButton = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
         
-ScreenGui.Name = "Dragon Sea"
+ScreenGui.Name = "ELGATO HUB ON/OFF"
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 UILock = true
@@ -37,13 +37,6 @@ if Debounce then return end
 	end
 end)
 UICorner.Parent = ImageButton
-
-function ArrayFieldLibrary:Destroy()
-	ArrayField:Destroy()
-	FieldScreen:Destroy()
-	if KeyMainUI then KeyMainUI:Destroy() end
-	if KeyUI then KeyUI:Destroy() end
-end
 
 --[[
 
