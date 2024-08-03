@@ -812,6 +812,8 @@ function ArrayFieldLibrary:Notify(NotificationSettings)
 	end)
 end
 
+ArrayFieldLibrary:Notify({Title = "Script", Content = "Script Has Been Load Succesfully", Duration = 5})
+
 function CloseSideBar()
 	Debounce = true
 	SideBarClosed = true
