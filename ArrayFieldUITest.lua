@@ -3432,7 +3432,6 @@ UniButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 UniButton.BorderSizePixel = 0
 UniButton.BackgroundTransparency = 1
 UniButton.Size = UDim2.new(0, 50, 0, 50)
-UniButton.Draggable = true
 UniButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
 UniButton.Parent = FieldScreen
 
