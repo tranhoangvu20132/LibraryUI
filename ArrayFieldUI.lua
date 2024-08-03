@@ -7,7 +7,7 @@ end
 local FieldScreen = Instance.new("ScreenGui")
 FieldScreen.DisplayOrder = 100
 FieldScreen.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
-FieldScreen.Name = "Uni" .. tostring(math.random(1000,9999))
+FieldScreen.Name = "ELGATO HUB ON/OFF" .. tostring(math.random(1000,9999))
 FieldScreen.Parent = gethui and gethui() or game:GetService("CoreGui")
 
 local ScreenGui = Instance.new("ScreenGui")
