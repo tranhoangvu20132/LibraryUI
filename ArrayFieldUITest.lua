@@ -3427,24 +3427,26 @@ UniButton.Name = "UniButton"
 UniButton.Image = "rbxassetid://15094837583"
 UniButton.Active = false
 --UniButton.AnchorPoint = Vector2.new(0.5,0.5)
+UniButton.ZIndex = 10
 UniButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 UniButton.BorderSizePixel = 0
 UniButton.BackgroundTransparency = 1
 UniButton.Size = UDim2.new(0, 50, 0, 50)
+UniButton.Draggable = true
 UniButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
 UniButton.Parent = FieldScreen
 
 local UniBoxButton = Instance.new("TextButton")
 UniBoxButton.Name = "UniBoxButton"
 --UniBoxButton.AnchorPoint = Vector2.new(0.5,0.5)
-UniBoxButton.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+UniBoxButton.ZIndex = 10
 UniBoxButton.AnchorPoint = Vector2.new(0.5, 0)
 UniBoxButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 UniBoxButton.Size = UDim2.new(0, 50, 0, 50)
-UniBoxButton.Draggable = true
 UniBoxButton.BorderSizePixel = 0
 UniBoxButton.BackgroundTransparency = 1
 UniBoxButton.Text = ""
+UniBoxButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
 UniBoxButton.Parent = UniButton
 
 ArrayFieldLibrary.UniButton = UniButton
@@ -3468,7 +3470,7 @@ UniButtonClicked = function(name,inputState,inputObject)
 	end
 end
 
-UniBoxButton.MouseButton1Down:Connect(UniButtonClicked)
+UniBoxButton.MouseButton1Click:Connect(UniButtonClicked)
 
 UserInputService.InputBegan:Connect(function(input, processed)
 	if (input.KeyCode == Enum.KeyCode.RightShift and not processed) then
