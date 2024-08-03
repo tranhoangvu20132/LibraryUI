@@ -1147,7 +1147,7 @@ function OpenSideBar()
 end
 function Minimise()
 	Debounce = true
-	Topbar.ChangeSize.Image = "rbxassetid://"..15094837583
+	Topbar.ChangeSize.Image = "rbxassetid://"..11036884234
 	if not SearchHided then
 		spawn(CloseSearch)
 	end
