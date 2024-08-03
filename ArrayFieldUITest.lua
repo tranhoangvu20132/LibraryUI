@@ -3469,7 +3469,7 @@ UniButtonClicked = function(name,inputState,inputObject)
 	end
 end
 
-UniBoxButton.MouseButton1Click:Connect(UniButtonClicked)
+UniBoxButton.MouseButton1Down:Connect(UniButtonClicked)
 
 UserInputService.InputBegan:Connect(function(input, processed)
 	if (input.KeyCode == Enum.KeyCode.RightShift and not processed) then
