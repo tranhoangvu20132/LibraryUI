@@ -12,12 +12,11 @@ ScreenGui.Name = "ELGATO HUB ON/OFF"
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 ImageButton.Parent = ScreenGui
-ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ImageButton.BorderSizePixel = 0
 ImageButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 ImageButton.Size = UDim2.new(0, 50, 0, 50)
 ImageButton.Draggable = true
-ImageButton.Image = "http://www.roblox.com/asset/?id=17664629557"
+ImageButton.Image = "http://www.roblox.com/asset/?id=15094837583
 ImageButton.MouseButton1Down:connect(function(name,inputState,inputObject)
     	if Debounce then return end
 	if Hidden then
