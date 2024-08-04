@@ -1,3 +1,37 @@
+for _, v in ipairs(game.CoreGui:GetChildren()) do
+    if v.Name == "ScreenGui" or v.Name == "ELGATO HUB ON/OFF" or v.Name == "Main" then
+        v:Destroy()
+    end
+end
+
+local ScreenGui = Instance.new("ScreenGui")
+local ImageButton = Instance.new("ImageButton")
+local UICorner = Instance.new("UICorner")
+        
+ScreenGui.Name = "ELGATO HUB ON/OFF"
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+UILock = true
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
+ImageButton.Size = UDim2.new(0, 50, 0, 50)
+ImageButton.Draggable = true
+ImageButton.Image = "http://www.roblox.com/asset/?id=15094837583"
+ImageButton.MouseButton1Down:connect(function()
+    if Debounce then return end
+	if Hidden then
+		Hidden = false
+		Unhide()
+	else
+		if not SearchHided then spawn(CloseSearch) end
+		Hidden = true
+		Hide()
+	end
+end)
+UICorner.Parent = ImageButton
+
 --[[
 
 ArrayField Interface Suite
@@ -3413,75 +3447,6 @@ Topbar.Hide.MouseButton1Click:Connect(function()
 		if not SearchHided then SearchHided = true spawn(CloseSearch)  end
 		Hidden = true
 		Hide()
-	end
-end)
-
-local FieldScreen = Instance.new("ScreenGui")
-FieldScreen.DisplayOrder = 100
-FieldScreen.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
-FieldScreen.Name = "Uni" .. tostring(math.random(1000,9999))
-FieldScreen.Parent = gethui and gethui() or game:GetService("CoreGui")
-
-local UniButton = Instance.new("ImageLabel")
-UniButton.Name = "UniButton"
-UniButton.Image = "rbxassetid://15094837583"
-UniButton.Active = false
---UniButton.AnchorPoint = Vector2.new(0.5,0.5)
-UniButton.ZIndex = 10
-UniButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
-UniButton.BorderSizePixel = 0
-UniButton.BackgroundTransparency = 1
-UniButton.Size = UDim2.new(0, 50, 0, 50)
-UniButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
-UniButton.Parent = FieldScreen
-
-local UniBoxButton = Instance.new("TextButton")
-UniBoxButton.Name = "UniBoxButton"
---UniBoxButton.AnchorPoint = Vector2.new(0.5,0.5)
-UniBoxButton.ZIndex = 10
-UniBoxButton.AnchorPoint = Vector2.new(0.5, 0)
-UniBoxButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
-UniBoxButton.Size = UDim2.new(0, 50, 0, 50)
-UniBoxButton.BorderSizePixel = 0
-UniBoxButton.BackgroundTransparency = 1
-UniBoxButton.Text = ""
-UniBoxButton.SizeConstraint = Enum.SizeConstraint.RelativeXY
-UniBoxButton.Parent = UniButton
-
-ArrayFieldLibrary.UniButton = UniButton
-
-function ArrayFieldLibrary:Destroy()
-	ArrayField:Destroy()
-	FieldScreen:Destroy()
-	if KeyMainUI then KeyMainUI:Destroy() end
-	if KeyUI then KeyUI:Destroy() end
-end
-
-UniButtonClicked = function(name,inputState,inputObject)
-	if Debounce then return end
-	if Hidden then
-		Hidden = false
-		Unhide()
-	else
-		if not SearchHided then spawn(CloseSearch) end
-		Hidden = true
-		Hide()
-	end
-end
-
-UniBoxButton.MouseButton1Click:Connect(UniButtonClicked)
-
-UserInputService.InputBegan:Connect(function(input, processed)
-	if (input.KeyCode == Enum.KeyCode.RightShift and not processed) then
-		if Debounce then return end
-		if Hidden then
-			Hidden = false
-			Unhide()
-		else
-			if not SearchHided then spawn(CloseSearch) end
-			Hidden = true
-			Hide()
-		end
 	end
 end)
 
