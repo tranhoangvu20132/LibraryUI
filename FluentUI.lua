@@ -1,5 +1,5 @@
 for _, v in ipairs(game.CoreGui:GetChildren()) do
-    if v.Name == "ScreenGui" or v.Name == "Dragon Sea ON/OFF" then
+    if v.Name == "ScreenGui" or v.Name == "Fluent UI Hide/UnHide" then
         v:Destroy()
     end
 end
@@ -8,7 +8,7 @@ local ScreenGui = Instance.new("ScreenGui")
 local ImageButton = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
         
-ScreenGui.Name = "Dragon Sea ON/OFF"
+ScreenGui.Name = "Fluent UI Hide/UnHide"
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 UILock = true
