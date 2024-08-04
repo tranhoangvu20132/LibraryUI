@@ -1,5 +1,5 @@
 for _, v in ipairs(game.CoreGui:GetChildren()) do
-    if v.Name == "ScreenGui" or v.Name == "ELGATO HUB ON/OFF" or v.Name == "Main" then
+    if v.Name == "ScreenGui" or v.Name == Rayfield UI Hide/UnHide" or v.Name == "Main" then
         v:Destroy()
     end
 end
@@ -8,7 +8,7 @@ local ScreenGui = Instance.new("ScreenGui")
 local ImageButton = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
         
-ScreenGui.Name = "ELGATO HUB ON/OFF"
+ScreenGui.Name = "Rayfield UI Hide/UnHide"
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 UILock = true
