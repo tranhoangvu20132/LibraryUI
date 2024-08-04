@@ -7,18 +7,20 @@ end
 local ScreenGui = Instance.new("ScreenGui")
 local ImageButton = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
-
+        
 ScreenGui.Name = "ELGATO HUB ON/OFF"
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+UILock = true
 ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 ImageButton.BorderSizePixel = 0
 ImageButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
 ImageButton.Size = UDim2.new(0, 50, 0, 50)
 ImageButton.Draggable = true
-ImageButton.Image = "http://www.roblox.com/asset/?id=15094837583
-ImageButton.MouseButton1Down:connect(function(name,inputState,inputObject)
-    	if Debounce then return end
+ImageButton.Image = "http://www.roblox.com/asset/?id=17664629557"
+ImageButton.MouseButton1Down:connect(function()
+    if Debounce then return end
 	if Hidden then
 		Hidden = false
 		Unhide()
@@ -30,12 +32,6 @@ ImageButton.MouseButton1Down:connect(function(name,inputState,inputObject)
 end)
 UICorner.Parent = ImageButton
 
-function ArrayFieldLibrary:Destroy()
-	ArrayField:Destroy()
-	FieldScreen:Destroy()
-	if KeyMainUI then KeyMainUI:Destroy() end
-	if KeyUI then KeyUI:Destroy() end
-end
 
 --[[
 
