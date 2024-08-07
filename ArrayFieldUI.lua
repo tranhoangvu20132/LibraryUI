@@ -846,8 +846,6 @@ function ArrayFieldLibrary:Notify(NotificationSettings)
 	end)
 end
 
-ArrayFieldLibrary:Notify({Title = "Notification", Content = "Script Has Been Loaded Succesfully!"})
-
 function CloseSideBar()
 	Debounce = true
 	SideBarClosed = true
@@ -3449,6 +3447,20 @@ Topbar.Hide.MouseButton1Click:Connect(function()
 		if not SearchHided then SearchHided = true spawn(CloseSearch)  end
 		Hidden = true
 		Hide()
+	end
+end)
+
+UserInputService.InputBegan:Connect(function(input, processed)
+	if (input.KeyCode == Enum.KeyCode.RightShift and not processed) then
+		if Debounce then return end
+		if Hidden then
+			Hidden = false
+			Unhide()
+		else
+			if not SearchHided then spawn(CloseSearch) end
+			Hidden = true
+			Hide()
+		end
 	end
 end)
 
